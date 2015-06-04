@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+	android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ImageView
+	    android:id="@+id/blueMarginMainMenu1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="3dp"
+	    android:contentDescription="@string/select_camera"
+	    android:src="@drawable/blue_line" />
+
+    <RelativeLayout
+        android:background="@drawable/gray_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+        
+    	<ImageView
+        	android:id="@+id/backButton"
+        	android:contentDescription="@string/select_camera"
+        	android:layout_width="35dp"
+        	android:layout_height="35dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:scaleType="fitCenter"
+        	android:onClick="returnToCameraMenu"
+        	android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/ftpHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backButton"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="returnToCameraMenu"
+            android:paddingLeft="20dp"
+            android:text="@string/alarm_settings"
+            android:textColor="#0099CC"
+            android:textSize="24sp" />
+    
+	</RelativeLayout>
+	
+    <ImageView
+        android:id="@+id/blueMarginMainMenu2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical" >
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        
+				<LinearLayout
+				    android:id="@+id/activateAlarmWrapper"
+				    android:layout_alignParentTop="true"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="20dp"
+				    android:layout_marginBottom="20dp"
+				    android:baselineAligned="false"
+				    android:orientation="horizontal" >
+				
+				    <LinearLayout
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:gravity="center"
+				        android:orientation="vertical" >
+				        
+				     <CheckBox
+				         android:id="@+id/motionAlarmCheckBox"
+				         android:layout_width="wrap_content"
+				         android:layout_height="wrap_content"
+				         android:text="@string/motion_alarm" />
+				        
+				    </LinearLayout>
+				
+				    <LinearLayout
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:gravity="center"
+				        android:orientation="vertical" >
+				     
+				     <CheckBox
+				         android:id="@+id/soundAlarmCheckBox"
+				         android:layout_width="wrap_content"
+				         android:layout_height="wrap_content"
+				         android:text="@string/sound_alarm" />
+				     
+				    </LinearLayout>
+				
+				</LinearLayout>
+				
+				<ImageView
+				    android:id="@+id/grayLine"
+				    android:layout_width="fill_parent"
+				    android:layout_height="3dp"
+				    android:contentDescription="@string/select_camera"
+				    android:src="@drawable/gray_line"
+				    android:layout_below="@+id/activateAlarmWrapper" />
+		        
+				<LinearLayout
+		            android:id="@+id/motionSensitivityWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_below="@+id/grayLine">
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:gravity="right"
+		                android:layout_gravity="center_vertical"
+		                android:text="@string/motion_sensitivity"
+		                android:textSize="16sp" />
+		
+			        <SeekBar
+			            android:id="@+id/motionSensitivity"
+			            android:layout_width="0dip"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1" />
+
+		        </LinearLayout>	
+		        
+			    <RelativeLayout
+			        android:id="@+id/motionCompensationWrapper"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/motionSensitivityWrapper"
+			        android:paddingTop="10dp" >
+			
+			        <CheckBox
+			            android:id="@+id/motionCompensation"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            android:textSize="16sp"
+			            android:text="@string/motion_compensation" />
+			
+			    </RelativeLayout>	
+			    
+				<LinearLayout
+		            android:id="@+id/soundSensitivityWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_below="@+id/motionCompensationWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:gravity="right"
+		                android:layout_gravity="center_vertical"
+		                android:text="@string/sound_sensitivity"
+		                android:textSize="16sp" />
+		
+			        <SeekBar
+			            android:id="@+id/soundSensitivity"
+			            android:layout_width="0dip"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1" />
+
+		        </LinearLayout>	
+		        
+				<RelativeLayout
+			        android:id="@+id/mailAlarmWrapper"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/soundSensitivityWrapper"
+			        android:paddingTop="10dp" >
+			
+			        <CheckBox
+			            android:id="@+id/mailAlarm"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            android:textSize="16sp"
+			            android:text="@string/mail_alarm" />
+			
+			    </RelativeLayout>
+			    
+				<RelativeLayout
+			        android:id="@+id/uploadAlarmWrapper"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/mailAlarmWrapper"
+			        android:paddingTop="10dp" >
+			
+			        <CheckBox
+			            android:id="@+id/uploadAlarm"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            android:textSize="16sp"
+			            android:text="@string/upload_alarm" />
+			
+			    </RelativeLayout>
+			    
+		        <LinearLayout
+		            android:id="@+id/uploadIntervalWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/uploadAlarmWrapper"
+		            android:paddingTop="10dp" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/upload_interval"
+		                android:textSize="16sp" />
+		
+		            <EditText
+		                android:id="@+id/uploadInterval"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:inputType="number"
+		                android:maxLength="64"
+		                android:textSize="16sp" />
+		            
+		        </LinearLayout>				
+		        	        	        		        		        
+				<RelativeLayout
+			        android:id="@+id/enableSchedulerWrapper"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/uploadIntervalWrapper"
+			        android:paddingTop="10dp" >
+			
+			        <CheckBox
+			            android:id="@+id/enableScheduler"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            android:textSize="16sp"
+			            android:text="@string/enable_scheduler" />
+			
+			    </RelativeLayout>		        
+		        
+		        
+			</RelativeLayout>
+		    
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+				
+			     <Space
+			        android:layout_weight="1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" />
+			
+		        <Button
+		            android:id="@+id/saveButton"
+		            android:layout_marginTop="20dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="2"
+		            android:onClick="save"
+		            android:text="@string/save_changes" />
+			    
+			    <Space
+			        android:layout_weight="1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" />
+			
+		        <Button
+		            android:id="@+id/editScheduleButton"
+		            android:layout_marginTop="20dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="2"
+		            android:onClick="editSchedule"
+		            android:text="@string/edit_schedule" />
+			
+			    <Space
+			        android:layout_weight="1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" />
+			    
+			</LinearLayout>
+		    
+		</LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

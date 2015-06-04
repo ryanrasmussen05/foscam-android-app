@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+	android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ImageView
+	    android:id="@+id/blueMarginMainMenu1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="3dp"
+	    android:contentDescription="@string/select_camera"
+	    android:src="@drawable/blue_line" />
+
+    <RelativeLayout
+        android:background="@drawable/gray_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+        
+    	<ImageView
+        	android:id="@+id/backButton"
+        	android:contentDescription="@string/select_camera"
+        	android:layout_width="35dp"
+        	android:layout_height="35dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:scaleType="fitCenter"
+        	android:onClick="returnToCameraMenu"
+        	android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/ftpHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backButton"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="@string/pan_tilt_settings"
+            android:clickable="true"
+            android:onClick="returnToCameraMenu"
+            android:textColor="#0099CC"
+            android:textSize="24sp" />
+    
+	</RelativeLayout>
+	
+    <ImageView
+        android:id="@+id/blueMarginMainMenu2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical" >
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        
+			    <RelativeLayout
+			        android:id="@+id/disablePresetWrapper"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:paddingTop="10dp" >
+			
+			        <CheckBox
+			            android:id="@+id/disablePreset"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            android:textSize="16sp"
+			            android:text="@string/disable_presets" />
+			
+			    </RelativeLayout>		        
+		        
+		    
+			    <RelativeLayout
+			        android:id="@+id/presetBootWrapper"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/disablePresetWrapper"
+			        android:paddingTop="10dp" >
+			
+			        <CheckBox
+			            android:id="@+id/presetBoot"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            android:textSize="16sp"
+			            android:text="@string/preset_boot" />
+			
+			    </RelativeLayout>		
+			    
+			    <RelativeLayout
+			        android:id="@+id/centerBootWrapper"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/presetBootWrapper"
+			        android:paddingTop="10dp" >
+			
+			        <CheckBox
+			            android:id="@+id/centerBoot"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            android:textSize="16sp"
+			            android:text="@string/center_boot" />
+			
+			    </RelativeLayout>	
+			    
+		        <LinearLayout
+		            android:id="@+id/ptSpeedWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_below="@+id/centerBootWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:gravity="right"
+		                android:text="@string/pt_speed"
+		                android:textSize="16sp" />
+		
+			        <SeekBar
+			            android:id="@+id/ptSpeed"
+			            android:layout_width="0dip"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1" />
+
+		        </LinearLayout>			    
+			    
+		        <LinearLayout
+		            android:id="@+id/upwardSpeedWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_below="@+id/ptSpeedWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:gravity="right"
+		                android:text="@string/upward_patrol_speed"
+		                android:textSize="16sp" />
+		
+			        <SeekBar
+			            android:id="@+id/upwardSpeed"
+			            android:layout_width="0dip"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1" />
+
+		        </LinearLayout>		  
+		        
+		        <LinearLayout
+		            android:id="@+id/downwardSpeedWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_below="@+id/upwardSpeedWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:gravity="right"
+		                android:text="@string/downward_patrol_speed"
+		                android:textSize="16sp" />
+		
+			        <SeekBar
+			            android:id="@+id/downwardSpeed"
+			            android:layout_width="0dip"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1" />
+
+		        </LinearLayout>	
+		        
+		        <LinearLayout
+		            android:id="@+id/rightwardSpeedWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_below="@+id/downwardSpeedWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:gravity="right"
+		                android:text="@string/rightward_patrol_speed"
+		                android:textSize="16sp" />
+		
+			        <SeekBar
+			            android:id="@+id/rightwardSpeed"
+			            android:layout_width="0dip"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1" />
+
+		        </LinearLayout>	
+		        
+		        <LinearLayout
+		            android:id="@+id/leftwardSpeedWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_below="@+id/rightwardSpeedWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:gravity="right"
+		                android:text="@string/leftward_patrol_speed"
+		                android:textSize="16sp" />
+		
+			        <SeekBar
+			            android:id="@+id/leftwardSpeed"
+			            android:layout_width="0dip"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1" />
+
+		        </LinearLayout>		
+		        
+		        <LinearLayout
+		            android:id="@+id/patrolRoundsVerticalWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_below="@+id/leftwardSpeedWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:gravity="right"
+		                android:text="@string/patrol_rounds_vertical"
+		                android:textSize="15sp" />
+
+		            <Spinner
+		                android:id="@+id/patrolRoundsVertical"
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:entries="@array/patrolArray"
+		                android:layout_weight="2" />
+
+		        </LinearLayout>		
+		        
+		        <LinearLayout
+		            android:id="@+id/patrolRoundsHorizontalWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_below="@+id/patrolRoundsVerticalWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:gravity="right"
+		                android:text="@string/patrol_rounds_horizontal"
+		                android:textSize="15sp" />
+
+		            <Spinner
+		                android:id="@+id/patrolRoundsHorizontal"
+		                android:layout_width="0dp"
+		                android:layout_height="wrap_content"
+		                android:entries="@array/patrolArray"
+		                android:layout_weight="2" />
+
+		        </LinearLayout>			        	        	        		        		        
+		        
+			</RelativeLayout>
+		    
+			<RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="10dp" >
+
+		        <Button
+		            android:id="@+id/saveButton"
+		            android:layout_marginTop="20dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:onClick="save"
+		            android:layout_centerInParent="true"
+		            android:text="@string/save_changes" />
+		    
+			</RelativeLayout>
+		    
+		</LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

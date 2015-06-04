@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>        
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    
+    <RelativeLayout
+        android:id="@+id/presetWrapper"
+	    android:layout_marginBottom="10dp"
+	    android:layout_marginTop="10dp"
+	    android:layout_alignParentTop="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+
+		<ImageButton
+		    android:id="@+id/preset1"
+		    android:tag="@string/one"
+		    android:layout_width="45dp"
+		    android:layout_height="45dp"
+		    android:layout_margin="3dp"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentTop="true"
+		    android:scaleType="fitCenter"
+		    android:background="@null"
+		    android:contentDescription="@string/preset_desc"
+		    android:src="@drawable/preset_button_one" />
+	
+		<ImageButton
+		    android:id="@+id/preset2"
+		    android:tag="@string/two"
+		    android:layout_width="45dp"
+		    android:layout_height="45dp"
+		    android:layout_margin="3dp"
+		    android:layout_toRightOf="@+id/preset1"
+		    android:layout_alignParentTop="true"
+		    android:scaleType="fitCenter"
+		    android:background="@null"
+		    android:contentDescription="@string/preset_desc"
+		    android:src="@drawable/preset_button_two" />	
+	
+		<ImageButton
+		    android:id="@+id/preset3"
+		    android:tag="@string/three"
+		    android:layout_width="45dp"
+		    android:layout_height="45dp"
+		    android:layout_margin="3dp"
+		    android:layout_toRightOf="@+id/preset2"
+		    android:layout_alignParentTop="true"
+		    android:scaleType="fitCenter"
+		    android:background="@null"
+		    android:contentDescription="@string/preset_desc"
+		    android:src="@drawable/preset_button_three" />	
+	
+		<ImageButton
+		    android:id="@+id/preset4"
+		    android:tag="@string/four"
+		    android:layout_width="45dp"
+		    android:layout_height="45dp"
+		    android:layout_marginTop="3dp"
+		    android:layout_marginLeft="3dp"
+		    android:layout_marginBottom="3dp"
+		    android:layout_toRightOf="@+id/preset3"
+		    android:layout_alignParentTop="true"
+		    android:scaleType="fitCenter"
+		    android:background="@null"
+		    android:contentDescription="@string/preset_desc"
+		    android:src="@drawable/preset_button_four" />	
+		    
+		<ImageButton
+		    android:id="@+id/preset5"
+		    android:tag="@string/five"
+		    android:layout_width="45dp"
+		    android:layout_height="45dp"
+		    android:layout_margin="3dp"
+		    android:layout_below="@+id/preset1"
+		    android:layout_alignParentLeft="true"
+		    android:scaleType="fitCenter"
+		    android:background="@null"
+		    android:contentDescription="@string/preset_desc"
+		    android:src="@drawable/preset_button_five" />		    
+	
+		<ImageButton
+		    android:id="@+id/preset6"
+		    android:tag="@string/six"
+		    android:layout_width="45dp"
+		    android:layout_height="45dp"
+		    android:layout_margin="3dp"
+		    android:layout_below="@+id/preset2"
+		    android:layout_toRightOf="@+id/preset5"
+		    android:scaleType="fitCenter"
+		    android:background="@null"
+		    android:contentDescription="@string/preset_desc"
+		    android:src="@drawable/preset_button_six" />	
+		    
+		<ImageButton
+		    android:id="@+id/preset7"
+		    android:tag="@string/seven"
+		    android:layout_width="45dp"
+		    android:layout_height="45dp"
+		    android:layout_margin="3dp"
+		    android:layout_below="@+id/preset3"
+		    android:layout_toRightOf="@+id/preset6"
+		    android:scaleType="fitCenter"
+		    android:background="@null"
+		    android:contentDescription="@string/preset_desc"
+		    android:src="@drawable/preset_button_seven" />	
+		    
+		<ImageButton
+		    android:id="@+id/preset8"
+		    android:tag="@string/eight"
+		    android:layout_width="45dp"
+		    android:layout_height="45dp"
+		    android:layout_marginTop="3dp"
+		    android:layout_marginLeft="3dp"
+		    android:layout_below="@+id/preset4"
+		    android:layout_toRightOf="@+id/preset7"
+		    android:scaleType="fitCenter"
+		    android:background="@null"
+		    android:contentDescription="@string/preset_desc"
+		    android:src="@drawable/preset_button_eight" />	
+		    
+	</RelativeLayout>
+	
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/presetWrapper" />
+    
+</RelativeLayout>

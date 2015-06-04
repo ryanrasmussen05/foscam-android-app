@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/blueMarginMainMenu1"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+
+    <RelativeLayout
+        android:background="@drawable/gray_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+        
+    	<ImageView
+        	android:id="@+id/backButton"
+        	android:contentDescription="@string/select_camera"
+        	android:layout_width="35dp"
+        	android:layout_height="35dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:scaleType="fitCenter"
+        	android:onClick="returnToCameraMenu"
+        	android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/cameraAliasHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backButton"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="@string/alarm_snapshots"
+            android:clickable="true"
+            android:onClick="returnToCameraMenu"
+            android:textColor="#0099CC"
+            android:textSize="24sp" />
+    
+	</RelativeLayout>
+
+    <ImageView
+        android:id="@+id/blueMarginMainMenu2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+        
+	    <Gallery 
+	        android:id="@+id/snapshotGallery"
+	        android:spacing="10dp"
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:layout_alignParentTop="true" />
+        
+	    <com.rhino.foscam.view.ZoomImageView 
+	        android:id="@+id/snapshot"
+	        android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_above="@+id/snapshotTime"
+        	android:layout_below="@+id/snapshotGallery"
+        	android:layout_centerHorizontal="true"
+        	android:layout_centerVertical="true"
+        	android:scaleType="matrix" />
+            
+		<TextView
+		    android:id="@+id/snapshotTime"
+		    android:text="@string/misc"
+		    android:textColor="#0099CC"
+		    android:layout_alignParentBottom="true"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginBottom="10dp"
+		    android:layout_centerHorizontal="true" />
+            
+    </RelativeLayout>
+		
+</LinearLayout>

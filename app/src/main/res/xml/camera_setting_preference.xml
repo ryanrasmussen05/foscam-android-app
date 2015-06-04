@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">	    
+    
+     
+    <PreferenceCategory android:title="@string/setting_camera_setting_title">
+        <PreferenceScreen android:title="@string/setting_camera_setting">
+            <intent android:targetPackage="com.foscam.ipc"
+             android:targetClass="com.foscam.ipc.settings.CameraParamSetting" >
+            </intent>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    
+    
+    <PreferenceCategory android:title="@string/camera_setting_wireless_setting">
+        <PreferenceScreen android:title="@string/camera_setting_wireless_setting">
+            <intent android:targetPackage="com.foscam.ipc"
+             	android:targetClass="com.foscam.ipc.settings.WirelessSetting" >
+            </intent>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    
+    
+</PreferenceScreen>

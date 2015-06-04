@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ImageView
+    android:id="@+id/blueMarginMainMenu1"
+    android:layout_width="fill_parent"
+    android:layout_height="3dp"
+    android:contentDescription="@string/select_camera"
+    android:src="@drawable/blue_line" />
+
+    <RelativeLayout
+        android:background="@drawable/gray_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+        
+    	<ImageView
+        	android:id="@+id/backButton"
+        	android:contentDescription="@string/select_camera"
+        	android:layout_width="35dp"
+        	android:layout_height="35dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:scaleType="fitCenter"
+        	android:onClick="returnToCameraMenu"
+        	android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/cameraLogHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backButton"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="@string/camera_log"
+            android:clickable="true"
+            android:onClick="returnToCameraMenu"
+            android:textColor="#0099CC"
+            android:textSize="24sp" />
+    
+	</RelativeLayout>
+	
+    <ImageView
+        android:id="@+id/blueMarginMainMenu2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+
+    <TextView
+        android:id="@+id/cameraLogText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false" />
+    
+</LinearLayout>

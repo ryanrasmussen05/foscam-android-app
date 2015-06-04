@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+		    
+	    <Space
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	
+	    <Button
+	        android:id="@+id/snapshotButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:layout_marginBottom="10dp"
+	        android:text="@string/snapshot"
+	        android:onClick="snapshot" />
+	    
+	    <Space
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	
+	    <Button
+	        android:id="@+id/liveFeedButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:layout_marginBottom="10dp"
+	        android:text="@string/live_feed" 
+	        android:onClick="liveFeed" />
+	
+	    <Space
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+		
+	</LinearLayout>
+	
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginBottom="15dp" >
+		
+		<CheckBox
+		   android:id="@+id/alarmNotification"
+		   android:layout_width="wrap_content"
+		   android:layout_height="wrap_content"
+		   android:layout_centerVertical="true"
+		   android:textSize="18sp"
+		   android:textColor="#FFFFFF"
+		   android:text="@string/alarm_notifications" />
+		   
+		<ImageButton
+			android:id="@+id/helpButton"
+			android:contentDescription="@string/misc"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_toRightOf="@+id/alarmNotification"
+			android:layout_marginLeft="3dp"
+			android:layout_centerVertical="true"
+			android:scaleType="fitCenter"
+			android:background="@drawable/button_circle_background"
+			android:src="@drawable/question_mark" />
+	
+	</RelativeLayout>
+	
+	<Button
+        android:id="@+id/openGalleryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:text="@string/alarm_snapshots"
+        android:onClick="openGallery" />
+	
+</LinearLayout>
+    

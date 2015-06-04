@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">	
+    <PreferenceCategory
+     android:title="@string/setting_user_account_title" >  
+        <PreferenceScreen android:title="@string/setting_user_account_edit_user_pwd">
+            <intent android:targetPackage="com.foscam.ipc"
+             android:targetClass="com.foscam.ipc.settings.ChangePassword" >
+            </intent>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    
+    
+     <!--  
+    <PreferenceCategory android:title="@string/setting_camera_setting_title">
+        <PreferenceScreen android:title="@string/setting_camera_setting">
+            <intent android:targetPackage="com.foscam.ipc"
+             android:targetClass="com.foscam.ipc.settings.CameraSettingActivity" >
+            </intent>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    -->
+    
+    
+    <PreferenceCategory android:title="@string/setting_camera_setting_know_foscam">
+        <PreferenceScreen android:title="@string/setting_camera_setting_visit_foscam">
+            <intent android:action="android.intent.action.VIEW" android:data="http://eunicorn.co.kr" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    
+    
+</PreferenceScreen>

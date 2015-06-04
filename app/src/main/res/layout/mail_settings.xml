@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+	android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ImageView
+	    android:id="@+id/blueMarginMainMenu1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="3dp"
+	    android:contentDescription="@string/select_camera"
+	    android:src="@drawable/blue_line" />
+
+    <RelativeLayout
+        android:background="@drawable/gray_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+        
+    	<ImageView
+        	android:id="@+id/backButton"
+        	android:contentDescription="@string/select_camera"
+        	android:layout_width="35dp"
+        	android:layout_height="35dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:scaleType="fitCenter"
+        	android:onClick="returnToCameraMenu"
+        	android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/ftpHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backButton"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="@string/mail_settings"
+            android:clickable="true"
+            android:onClick="returnToCameraMenu"
+            android:textColor="#0099CC"
+            android:textSize="24sp" />
+    
+	</RelativeLayout>
+	
+    <ImageView
+        android:id="@+id/blueMarginMainMenu2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+    
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical" >
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:id="@+id/mailSenderWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentTop="true" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_sender"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/mailSender"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:inputType="text"
+		                android:maxLength="64"
+		                android:textSize="18sp" />
+		            
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:id="@+id/mailReceiver1Wrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailSenderWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_receiver_1"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/mailReceiver1"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="64"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>
+		        
+		        <LinearLayout
+		            android:id="@+id/mailReceiver2Wrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailReceiver1Wrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_receiver_2"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/mailReceiver2"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="64"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>		        
+		        
+		        <LinearLayout
+		            android:id="@+id/mailReceiver3Wrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailReceiver2Wrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_receiver_3"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/mailReceiver3"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="64"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>			        
+		        
+		        <LinearLayout
+		            android:id="@+id/mailReceiver4Wrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailReceiver3Wrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_receiver_4"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/mailReceiver4"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="64"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>			        
+		        
+		        <LinearLayout
+		            android:id="@+id/mailServerWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailReceiver4Wrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_server"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/mailServer"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="64"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>			        
+		        
+		        <LinearLayout
+		            android:id="@+id/mailPortWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailServerWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_port"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/mailPort"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="64"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>			        
+		        
+		        <LinearLayout
+		            android:id="@+id/mailModeWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailPortWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_mode"
+		                android:textSize="18sp" />
+		
+		            <Spinner
+		                android:id="@+id/mailMode"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:entries="@array/mailModeArray"
+		                android:textSize="18sp" />
+		            
+		        </LinearLayout>			        
+		        
+		        <LinearLayout
+		            android:id="@+id/mailModeInfoWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailModeWrapper" >
+		
+		            <TextView
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:gravity="center"
+		                android:text="@string/mail_mode_info"
+		                android:textSize="14sp" />
+		    
+		        </LinearLayout>				        
+		        
+			    <RelativeLayout
+			        android:id="@+id/mailAuthenticationWrapper"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/mailModeInfoWrapper"
+			        android:paddingTop="10dp" >
+			
+			        <CheckBox
+			            android:id="@+id/mailAuthentication"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            android:textSize="16sp"
+			            android:text="@string/mail_auth" />
+			
+			    </RelativeLayout>		        
+		        
+		        <LinearLayout
+		            android:id="@+id/mailUserWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailAuthenticationWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_user"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/mailUser"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="64"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>			        
+		        
+		        <LinearLayout
+		            android:id="@+id/mailPasswordWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/mailUserWrapper" >
+		
+		            <TextView
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/mail_password"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/mailPassword"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="64"
+		                android:inputType="textPassword"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>			        
+		        
+			    <RelativeLayout
+			        android:id="@+id/mailReportIPWrapper"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/mailPasswordWrapper"
+			        android:paddingTop="10dp" >
+			
+			        <CheckBox
+			            android:id="@+id/mailReportIP"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            android:textSize="16sp"
+			            android:text="@string/mail_report_ip" />
+			
+			    </RelativeLayout>		        
+		        
+			</RelativeLayout>
+		    
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+			    
+			    <Space
+			        android:layout_weight="1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" />
+			
+		        <Button
+		            android:id="@+id/saveButton"
+		            android:layout_marginTop="20dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="2"
+		            android:onClick="save"
+		            android:text="@string/save" />
+			    
+			    <Space
+			        android:layout_weight="1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" />
+			
+		        <Button
+		            android:id="@+id/saveTestButton"
+		            android:layout_marginTop="20dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="2"
+		            android:onClick="saveTest"
+		            android:text="@string/save_test" />
+			
+			    <Space
+			        android:layout_weight="1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" />
+			
+			</LinearLayout>
+		    
+		</LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

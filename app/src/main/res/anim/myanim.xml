@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>				<!-- XML的版本以及编码方式 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"> 
+										<!-- 透明度的变换 -->
+									<!-- 尺寸的变换 -->
+  <translate
+	android:fromXDelta="200" 
+	android:toXDelta="0" 
+	android:fromYDelta="0"
+	android:toYDelta="0" 
+	android:duration="300" 
+  />											<!-- 位置的变换 -->
+									<!-- 旋转变换 -->
+</set>
+

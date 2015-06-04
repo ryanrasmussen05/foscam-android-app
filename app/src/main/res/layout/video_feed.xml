@@ -1,0 +1,244 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:keepScreenOn="true" >
+
+    <ImageView
+        android:id="@+id/blueMarginMainMenu1"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+
+    <RelativeLayout
+        android:background="@drawable/gray_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="5dp" >
+        
+    	<ImageView
+        	android:id="@+id/backButton"
+        	android:contentDescription="@string/select_camera"
+        	android:layout_width="35dp"
+        	android:layout_height="35dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:scaleType="fitCenter"
+        	android:onClick="returnToCameraMenu"
+        	android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/cameraAliasHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backButton"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="@string/live_feed"
+            android:clickable="true"
+            android:onClick="returnToCameraMenu"
+            android:textColor="#0099CC"
+            android:textSize="24sp" />
+        
+		<ImageButton
+		    android:id="@+id/videoSettingsButton"
+		    android:layout_width="40dp"
+		    android:layout_height="40dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/null_background"
+		    android:contentDescription="@string/add_camera"
+		    android:onClick="showVideoSettingsDialog"
+		    android:padding="5dp"
+		    android:scaleType="fitCenter"
+		    android:src="@drawable/menu" />
+    
+	</RelativeLayout>
+
+    <ImageView
+        android:id="@+id/blueMarginMainMenu2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+
+	<RelativeLayout
+	    android:id="@+id/videoWrapper"
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+        
+	    <com.rhino.foscam.view.ZoomImageView 
+	        android:id="@+id/video"
+	        android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_alignParentTop="true"
+        	android:layout_above="@+id/blueMargin3"
+        	android:scaleType="matrix" />
+	    
+	    <ImageView
+	        android:id="@+id/blueMargin3"
+	        android:layout_width="fill_parent"
+	        android:layout_height="3dp"
+	        android:layout_above="@+id/buttonWrapper"
+	        android:contentDescription="@string/misc"
+	        android:src="@drawable/blue_line" />
+	        
+	    <LinearLayout
+	    	android:id="@+id/buttonWrapper"
+	        android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_alignParentBottom="true"
+    		android:baselineAligned="false"
+    		android:orientation="horizontal"
+    		android:background="@drawable/gray_box_no_padding" >
+	        
+	        <RelativeLayout
+	        	android:id="@+id/leftButtonWrapper"
+	        	android:layout_width="0dp"
+	        	android:layout_height="145dp"
+	        	android:layout_weight="1" >
+	        	
+	           	<ImageButton
+		    		android:id="@+id/presetButton"
+		    		android:contentDescription="@string/misc"
+		    		android:layout_width="145dp"
+		    		android:layout_height="35dp"
+		    		android:layout_margin="5dp"
+		    		android:layout_alignParentLeft="true"
+		    		android:layout_alignParentBottom="true"
+		    		android:scaleType="fitCenter"
+		    		android:background="@drawable/button_background"
+		    		android:src="@drawable/presets"
+		    		android:onClick="showPresetDialog" />
+	           	
+	           	<ImageButton
+		    		android:id="@+id/irOnButton"
+		    		android:contentDescription="@string/misc"
+		    		android:layout_width="45dp"
+		    		android:layout_height="45dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_alignParentLeft="true"
+		    		android:layout_above="@+id/presetButton"
+		    		android:scaleType="fitCenter"
+		    		android:background="@drawable/button_background"
+		    		android:src="@drawable/ir_on"
+		    		android:onClick="irOn" />
+		    		
+		    	<ImageButton
+		    		android:id="@+id/irOffButton"
+		    		android:contentDescription="@string/misc"
+		    		android:layout_width="45dp"
+		    		android:layout_height="45dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_toRightOf="@+id/irOnButton"
+		    		android:layout_above="@+id/presetButton"
+		    		android:scaleType="fitCenter"
+		    		android:background="@drawable/button_background"
+		    		android:src="@drawable/ir_off"
+		    		android:onClick="irOff" />
+	    	
+		    	<ImageButton
+		    		android:id="@+id/speakerButton"
+		    		android:contentDescription="@string/misc"
+		    		android:layout_width="45dp"
+		    		android:layout_height="45dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginBottom="5dp"
+		    		android:layout_alignParentLeft="true"
+		    		android:layout_above="@+id/irOnButton"
+		    		android:scaleType="fitCenter"
+		    		android:background="@drawable/button_background"
+		    		android:src="@drawable/speaker_off"
+		    		android:onClick="listen" />
+	           	
+	           	<ImageButton
+		    		android:id="@+id/microphoneButton"
+		    		android:contentDescription="@string/misc"
+		    		android:layout_width="45dp"
+		    		android:layout_height="45dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginBottom="5dp"
+		    		android:layout_toRightOf="@+id/speakerButton"
+		    		android:layout_above="@+id/irOffButton"
+		    		android:scaleType="fitCenter"
+		    		android:background="@drawable/button_background"
+		    		android:src="@drawable/microphone_off"
+		    		android:onClick="talk" />
+	        	
+	        </RelativeLayout>
+	       
+		    <RelativeLayout
+		        android:id="@+id/arrowWrapper"
+		        android:layout_width="0dp"
+		        android:layout_height="145dp"
+		  		android:layout_weight="1" >
+		    	    
+		    	<ImageButton
+		    		android:id="@+id/snapshotButton"
+		    		android:contentDescription="@string/misc"
+		    		android:layout_width="35dp"
+		    		android:layout_height="35dp"
+		    		android:layout_margin="5dp"
+		    		android:layout_centerInParent="true"
+		    		android:scaleType="fitCenter"
+		    		android:background="@drawable/button_background"
+		    		android:src="@drawable/snapshot"
+		    		android:onClick="takeSnapshot" />
+		    	
+		    	<ImageButton
+		        	android:id="@+id/leftButton"
+		        	android:contentDescription="@string/misc"
+		        	android:layout_width="45dp"
+		        	android:layout_height="45dp"
+					android:layout_centerVertical="true"
+					android:layout_toLeftOf="@+id/snapshotButton"
+		        	android:scaleType="fitCenter"
+		        	android:background="@drawable/button"
+		        	android:src="@drawable/left" />
+		    	
+		    	<ImageButton
+		        	android:id="@+id/rightButton"
+		        	android:contentDescription="@string/misc"
+		        	android:layout_width="45dp"
+		        	android:layout_height="45dp"
+					android:layout_centerVertical="true"
+					android:layout_toRightOf="@+id/snapshotButton"
+		        	android:scaleType="fitCenter"
+		        	android:background="@drawable/button"
+		        	android:src="@drawable/right" />
+		    	
+		    	<ImageButton
+		        	android:id="@+id/upButton"
+		        	android:contentDescription="@string/misc"
+		        	android:layout_width="45dp"
+		        	android:layout_height="45dp"
+					android:layout_centerHorizontal="true"
+					android:layout_above="@+id/snapshotButton"
+		        	android:scaleType="fitCenter"
+		        	android:background="@drawable/button"
+		        	android:src="@drawable/up" />	   
+		        	
+		    	<ImageButton
+		        	android:id="@+id/downButton"
+		        	android:contentDescription="@string/misc"
+		        	android:layout_width="45dp"
+		        	android:layout_height="45dp"
+					android:layout_centerHorizontal="true"
+					android:layout_below="@+id/snapshotButton"
+		        	android:scaleType="fitCenter"
+		        	android:background="@drawable/button"
+		        	android:src="@drawable/down" />	
+	    	
+		    </RelativeLayout>
+		    
+		</LinearLayout>
+	        
+    </RelativeLayout>
+		
+</LinearLayout>

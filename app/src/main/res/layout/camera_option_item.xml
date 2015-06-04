@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp" 
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/cameraOption"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:singleLine="true"
+        android:layout_marginLeft="5dp" />
+
+    <ImageView
+        android:id="@+id/optionOpen"
+        android:contentDescription="@string/select_camera"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/right_arrow" />
+
+</RelativeLayout>

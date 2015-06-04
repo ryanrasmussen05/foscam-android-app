@@ -1,0 +1,6 @@
+C:\projects\android\AndroCam\app\build\intermediates\classes\debug
+C:\projects\android\AndroCam\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-09f719679e764210f3da1445e41b520e1ead1747.jar
+C:\projects\android\AndroCam\app\build\intermediates\pre-dexed\debug\commons-logging-1.1.3-ccbae39598933dff75dfc728920c15ab20f13607.jar
+C:\projects\android\AndroCam\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-3e55243e52afb8736a61d26de17cecf7e26d0d78.jar
+C:\projects\android\AndroCam\app\build\intermediates\pre-dexed\debug\httpcore-4.3-f8b05e168b4916083694f3ce34f3e3fcb5097f82.jar
+C:\projects\android\AndroCam\app\build\intermediates\pre-dexed\debug\classes-28fb87da8b9f56a072f1b6af483cd52ee186cd3d.jar

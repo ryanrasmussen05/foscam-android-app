@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+	android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ImageView
+	    android:id="@+id/blueMarginMainMenu1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="3dp"
+	    android:contentDescription="@string/select_camera"
+	    android:src="@drawable/blue_line" />
+
+    <RelativeLayout
+        android:background="@drawable/gray_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+        
+    	<ImageView
+        	android:id="@+id/backButton"
+        	android:contentDescription="@string/select_camera"
+        	android:layout_width="35dp"
+        	android:layout_height="35dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:scaleType="fitCenter"
+        	android:onClick="returnToCameraMenu"
+        	android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/manageUsersHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backButton"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="@string/manage_users"
+            android:clickable="true"
+            android:onClick="returnToCameraMenu"
+            android:textColor="#0099CC"
+            android:textSize="24sp" />
+    
+	</RelativeLayout>
+	
+    <ImageView
+        android:id="@+id/blueMarginMainMenu2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+    
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical" >
+		
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/dark_blue_box"
+		        android:gravity="center"
+		        android:text="@string/user_1"
+		        android:textSize="18sp" />
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:id="@+id/user1NameWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentTop="true" >
+		
+		            <TextView
+		                android:id="@+id/textView9"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/username"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/username1"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:inputType="text"
+		                android:maxLength="12"
+		                android:textSize="18sp" />
+		            
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:id="@+id/user1PasswordWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user1NameWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView10"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/password"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/password1"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="12"
+		                android:inputType="textPassword"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user1PasswordWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView11"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/group"
+		                android:textSize="18sp" />
+		
+		            <Spinner
+		                android:id="@+id/priv1"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:entries="@array/privArray"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		    </RelativeLayout>
+		
+		    <TextView
+		        android:id="@+id/textView2"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/dark_blue_box"
+		        android:gravity="center"
+		        android:text="@string/user_2"
+		        android:textSize="18sp" />
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:id="@+id/user2NameWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentTop="true" >
+		
+		            <TextView
+		                android:id="@+id/textView12"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/username"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/username2"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:inputType="text"
+		                android:maxLength="12"
+		                android:textSize="18sp" />
+		            
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:id="@+id/user2PasswordWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user2NameWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView13"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/password"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/password2"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="12"
+		                android:inputType="textPassword"
+		                android:textSize="18sp" />
+
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user2PasswordWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView14"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/group"
+		                android:textSize="18sp" />
+		
+		            <Spinner
+		                android:id="@+id/priv2"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:entries="@array/privArray"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		    </RelativeLayout>
+		
+		    <TextView
+		        android:id="@+id/textView3"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/dark_blue_box"
+		        android:gravity="center"
+		        android:text="@string/user_3"
+		        android:textSize="18sp" />
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:id="@+id/user3NameWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentTop="true" >
+		
+		            <TextView
+		                android:id="@+id/textView15"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/username"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/username3"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="12"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:id="@+id/user3PasswordWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user3NameWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView16"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/password"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/password3"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:maxLength="12"
+		                android:inputType="textPassword"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user3PasswordWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView17"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/group"
+		                android:textSize="18sp" />
+		
+		            <Spinner
+		                android:id="@+id/priv3"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:entries="@array/privArray"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		    </RelativeLayout>
+		
+		    <TextView
+		        android:id="@+id/textView4"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/dark_blue_box"
+		        android:gravity="center"
+		        android:text="@string/user_4"
+		        android:textSize="18sp" />
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:id="@+id/user4NameWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentTop="true" >
+		
+		            <TextView
+		                android:id="@+id/textView18"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/username"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/username4"
+		                android:layout_width="0dip"
+		                android:maxLength="12"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:id="@+id/user4PasswordWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user4NameWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView19"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/password"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/password4"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:maxLength="12"
+		                android:layout_weight="3"
+		                android:inputType="textPassword"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user4PasswordWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView20"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/group"
+		                android:textSize="18sp" />
+		
+		            <Spinner
+		                android:id="@+id/priv4"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:entries="@array/privArray"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		    </RelativeLayout>
+		
+		    <TextView
+		        android:id="@+id/textView5"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/dark_blue_box"
+		        android:gravity="center"
+		        android:text="@string/user_5"
+		        android:textSize="18sp" />
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:id="@+id/user5NameWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentTop="true" >
+		
+		            <TextView
+		                android:id="@+id/textView21"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/username"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/username5"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:maxLength="12"
+		                android:layout_weight="3"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:id="@+id/user5PasswordWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user5NameWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView22"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/password"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/password5"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:maxLength="12"
+		                android:layout_weight="3"
+		                android:inputType="textPassword"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user5PasswordWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView23"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/group"
+		                android:textSize="18sp" />
+		
+		            <Spinner
+		                android:id="@+id/priv5"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:entries="@array/privArray"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		    </RelativeLayout>
+		
+		    <TextView
+		        android:id="@+id/textView6"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/dark_blue_box"
+		        android:gravity="center"
+		        android:text="@string/user_6"
+		        android:textSize="18sp" />
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:id="@+id/user6NameWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentTop="true" >
+		
+		            <TextView
+		                android:id="@+id/textView24"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/username"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/username6"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:maxLength="12"
+		                android:layout_weight="3"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:id="@+id/user6PasswordWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user6NameWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView25"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/password"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/password6"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:maxLength="12"
+		                android:layout_weight="3"
+		                android:inputType="textPassword"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user6PasswordWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView26"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/group"
+		                android:textSize="18sp" />
+		
+		            <Spinner
+		                android:id="@+id/priv6"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:entries="@array/privArray"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		    </RelativeLayout>
+		
+		    <TextView
+		        android:id="@+id/textView7"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/dark_blue_box"
+		        android:gravity="center"
+		        android:text="@string/user_7"
+		        android:textSize="18sp" />
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:id="@+id/user7NameWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentTop="true" >
+		
+		            <TextView
+		                android:id="@+id/textView27"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/username"
+		                android:textSize="18sp"
+		                tools:ignore="TooManyViews" />
+		
+		            <EditText
+		                android:id="@+id/username7"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:maxLength="12"
+		                android:layout_weight="3"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:id="@+id/user7PasswordWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user7NameWrapper"
+		            tools:ignore="TooManyViews" >
+		
+		            <TextView
+		                android:id="@+id/textView28"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/password"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/password7"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:maxLength="12"
+		                android:layout_weight="3"
+		                android:inputType="textPassword"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user7PasswordWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView29"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/group"
+		                android:textSize="18sp" />
+		
+		            <Spinner
+		                android:id="@+id/priv7"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:entries="@array/privArray"
+		                android:textSize="18sp"
+		                tools:ignore="TooManyViews" />
+		        </LinearLayout>
+		    </RelativeLayout>
+		
+		    <TextView
+		        android:id="@+id/textView8"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/dark_blue_box"
+		        android:gravity="center"
+		        android:text="@string/user_8"
+		        android:textSize="18sp" />
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <LinearLayout
+		            android:id="@+id/user8NameWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentTop="true" >
+		
+		            <TextView
+		                android:id="@+id/textView31"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/username"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/username8"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:maxLength="12"
+		                android:layout_weight="3"
+		                android:inputType="text"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:id="@+id/user8PasswordWrapper"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user8NameWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView32"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/password"
+		                android:textSize="18sp" />
+		
+		            <EditText
+		                android:id="@+id/password8"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:maxLength="12"
+		                android:layout_weight="3"
+		                android:inputType="textPassword"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/user8PasswordWrapper" >
+		
+		            <TextView
+		                android:id="@+id/textView33"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"
+		                android:gravity="right"
+		                android:text="@string/group"
+		                android:textSize="18sp" />
+		
+		            <Spinner
+		                android:id="@+id/priv8"
+		                android:layout_width="0dip"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="3"
+		                android:entries="@array/privArray"
+		                android:textSize="18sp" />
+		        </LinearLayout>
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <Button
+		            android:id="@+id/saveButton"
+		            android:layout_marginTop="20dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true"
+		            android:layout_centerHorizontal="true"
+		            android:onClick="saveChanges"
+		            android:text="@string/save_changes" />
+		
+		    </RelativeLayout>
+		    
+		</LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

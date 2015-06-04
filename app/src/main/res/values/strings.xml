@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Foscam</string>
+    <string name="launch_icon">Launch Icon</string>
+    <string name="logo">Rhino Development logo</string>
+    <string name="select_camera">Select Camera</string>
+    <string name="add_camera">Add Camera</string>
+    <string name="camera_type">Camera Type:</string>
+    <string name="camera_name">Camera Name:</string>
+    <string name="ip_url">IP/Url:</string>
+    <string name="port">Port:</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="snapshot">Snapshot</string>
+    <string name="close">Close</string>
+    <string name="live_feed">Live Feed</string>
+    <string name="motion_alarm">Motion Alarm</string>
+    <string name="sound_alarm">Sound Alarm</string>
+    <string name="connecting">Connecting</string>
+    <string name="camera_log">Camera Log</string>
+    <string name="camera_alias">Camera Name</string>
+    <string name="alias">Name:</string>
+    <string name="alias_warning">Camera Name cannot contain any of the following characters: / : * ? " |. Otherwise, it cannot create a recording file.</string>
+    <string name="alias_save">Save Camera Name</string>
+    <string name="date_time_settings">Date and Time Settings</string>
+	<string name="device_clock_time">Device Time:</string>
+	<string name="device_clock_timezone">Timezone:</string>
+	<string name="sync_ntp">Sync with NTP Server</string>
+	<string name="ntp_server">NTP Server:</string>
+	<string name="daylight_savings">Daylight Savings Time</string>
+    <string name="date_format">Date Format</string>
+    <string name="time_format">Time Format</string>
+	<string name="save_changes">Save Changes</string>
+	<string name ="manage_users">Manage Users</string>
+	<string name="user_1">User 1</string>
+	<string name="user_2">User 2</string>
+	<string name="user_3">User 3</string>
+	<string name="user_4">User 4</string>
+	<string name="user_5">User 5</string>
+	<string name="user_6">User 6</string>
+	<string name="user_7">User 7</string>
+	<string name="user_8">User 8</string>
+	<string name="group">Group:</string>
+	<string name="ftp_settings">FTP Settings</string>
+	<string name="ftp_server">FTP Server:</string>
+	<string name="ftp_port">FTP Port:</string>
+	<string name="ftp_user">FTP User:</string>
+	<string name="ftp_password">FTP Password:</string>
+	<string name="ftp_folder">Upload Folder:</string>
+	<string name="ftp_mode">FTP Mode:</string>
+	<string name="ftp_upload_now">Continuous Upload</string>
+	<string name="ftp_upload_interval">Upload Interval:</string>
+	<string name="ftp_enable_filename">Set Filename</string>
+	<string name="ftp_filename">Filename:</string>
+	<string name="save">Save</string>
+	<string name="save_test">Save and Test</string>
+    <string name="test">Test</string>
+	<string name="testing_ftp">Testing FTP Settings</string>
+	<string name="testing_mail">Testing Mail Settings</string>
+	<string name="mail_settings">Mail Settings</string>
+	<string name="mail_sender">Sender:</string>
+	<string name="mail_receiver_1">Receiver 1:</string>
+	<string name="mail_receiver_2">Receiver 2:</string>
+	<string name="mail_receiver_3">Receiver 3:</string>
+	<string name="mail_receiver_4">Receiver 4:</string>
+	<string name="mail_server">SMTP Server:</string>
+	<string name="mail_port">SMTP Port:</string>
+	<string name="mail_mode">TL Security:</string>
+	<string name="mail_auth">Need Authentication</string>
+	<string name="mail_user">SMTP User:</string>
+	<string name="mail_password">SMTP Password:</string>
+	<string name="mail_report_ip">Report IP By Mail</string>
+	<string name="mail_mode_info">Gmail only supports TLS at port 465 and supports STARTTLS at port 25/587</string>
+	<string name="pan_tilt_settings">Pan/Tilt Settings</string>
+	<string name="disable_presets">Disable Presets</string>
+	<string name="preset_boot">Go to Preset 1 on boot</string>
+	<string name="center_boot">Center camera on boot</string>
+	<string name="pt_speed">P/T Speed:</string>
+	<string name="upward_patrol_speed">Upward Patrol Speed:</string>
+	<string name="downward_patrol_speed">Downward Patrol Speed:</string>
+	<string name="rightward_patrol_speed">Rightward Patrol Speed:</string>
+	<string name="leftward_patrol_speed">Leftward Patrol Speed:</string>
+	<string name="patrol_rounds_horizontal">Patrol Rounds Horizontal:</string>
+	<string name="patrol_rounds_vertical">Patrol Rounds Vertical:</string>
+	<string name="alarm_settings">Alarm Settings</string>
+	<string name="motion_sensitivity">Motion Sensitivity:</string>
+	<string name="motion_compensation">Motion Compensation</string>
+	<string name="sound_sensitivity">Sound Sensitivity:</string>
+	<string name="mail_alarm">Send Mail on Alarm</string>
+	<string name="upload_alarm">Upload Image on Alarm</string>
+	<string name="upload_interval">Upload Interval:</string>
+	<string name="enable_scheduler">Enable Scheduler</string>
+	<string name="edit_schedule">Edit Schedule</string>
+	<string name="alarm_schedule">Alarm Schedule</string>
+	<string name="cancel">Cancel</string>
+	<string name="select_all">Select All</string>
+	<string name="clear_all">Clear All</string>
+	<string name="alarm_active">Activate alarm in this timespan</string>
+	<string name="zero_time">:00</string>
+	<string name="fifteen_time">:15</string>
+	<string name="thirty">:30</string>
+	<string name="fortyfive">:45</string>
+	<string name="time_zero">12 AM</string>
+	<string name="time_one">1 AM</string>
+	<string name="time_two">2 AM</string>
+	<string name="time_three">3 AM</string>
+	<string name="time_four">4 AM</string>
+	<string name="time_five">5 AM</string>
+	<string name="time_six">6 AM</string>
+	<string name="time_seven">7 AM</string>
+	<string name="time_eight">8 AM</string>
+	<string name="time_nine">9 AM</string>
+	<string name="time_ten">10 AM</string>
+	<string name="time_eleven">11 AM</string>
+	<string name="time_twelve">12 PM</string>
+	<string name="time_thirteen">1 PM</string>
+	<string name="time_fourteen">2 PM</string>
+	<string name="time_fifteen">3 PM</string>
+	<string name="time_sixteen">4 PM</string>
+	<string name="time_seventeen">5 PM</string>
+	<string name="time_eighteen">6 PM</string>
+	<string name="time_nineteen">7 PM</string>
+	<string name="time_twenty">8 PM</string>
+	<string name="time_twentyone">9 PM</string>
+	<string name="time_twentytwo">10 PM</string>
+	<string name="time_twentythree">11 PM</string>
+	<string name="pinch_zoom">(Pinch to Zoom)</string>
+	<string name="misc">misc</string>
+	<string name="resolution">Resolution:</string>
+	<string name="mode">Mode:</string>
+	<string name="brightness">Brightness:</string>
+	<string name="contrast">Contrast:</string>
+	<string name="updating_settings">Updating Settings (This may take several seconds)</string>
+	<string name="mirror">Mirror</string>
+	<string name="flip">Flip</string>
+	<string name="time_row">time row</string>
+	<string name="preset_desc">presetDesc</string>
+	<string name="alarm_notifications">Notifications</string>
+	<string name="notification_settings">Notification Settings</string>
+	<string name="show_notificaiton">Show Notification</string>
+	<string name="show_notification_help">Select this option to display a notification in the status bar when the alarm is triggered.</string>
+	<string name="notification_sound">Notification Sound</string>
+	<string name="notification_snapshot">Save Snapshots</string>
+	<string name="notification_snapshot_help">Select this option to save a snapshot when the alarm is triggered. (This option may increase data usage depending on how often the alarm is triggered.)</string>
+	<string name="alarm_snapshots">Alarm Snapshots</string>
+	
+	<string name="zero">0</string>
+	<string name="one">1</string>
+	<string name="two">2</string>
+	<string name="three">3</string>
+	<string name="four">4</string>
+	<string name="five">5</string>
+	<string name="six">6</string>
+	<string name="seven">7</string>
+	<string name="eight">8</string>
+	<string name="nine">9</string>
+	<string name="ten">10</string>
+	<string name="eleven">11</string>
+	<string name="twelve">12</string>
+	<string name="thirteen">13</string>
+	<string name="fourteen">14</string>
+	<string name="fifteen">15</string>
+	<string name="sixteen">16</string>
+	<string name="seventeen">17</string>
+	<string name="eighteen">18</string>
+	<string name="nineteen">19</string>
+	<string name="twenty">20</string>
+	<string name="twentyone">21</string>
+	<string name="twentytwo">22</string>
+	<string name="twentythree">23</string>
+	
+	<string-array name="timeZoneArray">
+	    <item>(GMT -11:00) Samoa</item>
+        <item>(GMT -10:00) Hawaii</item>
+        <item>(GMT -9:00) Alaska Standard</item>
+        <item>(GMT -8:00) Pacific Standard</item>
+        <item>(GMT -7:00) Mountain Standard</item>
+        <item>(GMT -6:00) Central Standard</item>
+        <item>(GMT -5:00) Eastern Standard</item>
+        <item>(GMT -4:00) Atlantic Standard</item>
+        <item>(GMT -3:00) Brasilia</item>
+        <item>(GMT -2:00) South Georgie</item>
+        <item>(GMT -1:00) Reykjavik</item>
+        <item>(GMT) London</item>
+        <item>(GMT +1:00) Paris</item>
+        <item>(GMT +2:00) Athens</item>
+        <item>(GMT +3:00) Moscow</item>
+        <item>(GMT +4:00) Baku</item>
+        <item>(GMT +5:00) Islamabad</item>
+        <item>(GMT +6:00) Dhaka</item>
+        <item>(GMT +7:00) Bangkok</item>
+        <item>(GMT +8:00) Beijing</item>
+        <item>(GMT +9:00) Tokyo</item>
+        <item>(GMT +10:00) Guam</item>
+        <item>(GMT +11:00) Solomon Islands</item>
+        <item>(GMT +12:00) Auckland</item>
+    </string-array>
+    
+	<string-array name="ntpServerArray">
+        <item>time.nist.gov</item>
+        <item>time.kriss.re.kr</item>
+        <item>time.windows.com</item>
+        <item>time.nuri.net</item>
+    </string-array>
+
+    <string-array name="dateFormatArray">
+        <item>YYYY-MM-DD</item>
+        <item>DD/MM/YYYY</item>
+        <item>MM/DD/YYYY</item>
+    </string-array>
+
+    <string-array name="timeFormatArray">
+        <item>12-hour</item>
+        <item>24-hour</item>
+    </string-array>
+    
+	<string-array name="privArray">
+	    <item>Visitor</item>
+	    <item>Operator</item>
+	    <item>Admin</item>
+	</string-array>
+	
+	<string-array name="ftpModeArray">
+	    <item>PORT</item>
+	    <item>PASV</item>
+	</string-array>
+
+    <string-array name="ftpModeArrayHd">
+        <item>PASV</item>
+        <item>PORT</item>
+    </string-array>
+	
+	<string-array name="mailModeArray">
+	    <item>None</item>
+	    <item>TLS</item>
+	    <item>STARTTTLS</item>
+	</string-array>
+	
+	<string-array name="patrolArray">
+		<item>Infinite</item>
+	    <item>1</item>
+	    <item>2</item>
+	    <item>3</item>
+	    <item>4</item>
+	    <item>5</item>
+	    <item>6</item>
+	    <item>7</item>
+	    <item>8</item>
+	    <item>9</item>
+	    <item>10</item>
+	</string-array>
+	
+	<string-array name="days">
+	    <item>Sunday</item>
+	    <item>Monday</item>
+	    <item>Tuesday</item>
+	    <item>Wednesday</item>
+	    <item>Thursday</item>
+	    <item>Friday</item>
+	    <item>Saturday</item>
+	</string-array>
+	
+	<string-array name="resolution">
+	    <item>640*480</item>
+	    <item>320*240</item>
+	</string-array>
+	
+	<string-array name="mode">
+	    <item>50 HZ</item>
+	    <item>60 HZ</item>
+	    <item>Outdoor</item>
+	</string-array>
+	
+	<string-array name="cameraTypes">
+		<item>Standard Def(MJPEG)</item>
+		<item>High Def(H.264)</item>
+	</string-array>
+	
+	
+	
+	    <string name="sql_create_device_list_tbl">
+	    CREATE TABLE tb_device_list(
+	    _id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	    devType NUMERIC NULL,
+	    devName VARCHAR(64) NULL,
+	    ip VARCHAR(64) NULL,
+	    streamType NUMERIC DEFAULT 0 NULL,
+	    webPort NUMERIC NULL,
+	    mediaPort NUMERIC NULL,
+	    uid VARCHAR(128) NULL,
+	    userName VARCHAR(64) NULL,
+	    password VARCHAR(64) NULL,
+	    reserve1 NUMERIC NULL,
+	    reserve2 NUMERIC NULL,
+	    reserve3 NUMERIC NULL,
+	    reserve4 NUMERIC NULL
+		)
+	</string>
+	
+	<string name="drop_sql">drop table if EXISTS tb_device_list;</string>
+
+	 <string name="login_login">Login</string>
+	
+	 <string name="login_error_username_is_empty">User name is empty</string>
+	 <string name="login_remember_me">Remember me</string>
+	 <string name="login_error_user_pwd_error">User name or password error</string>
+	 <string name="login_password">Password</string>
+	 <string name="login_userName">User name</string>
+	 
+	 <string name="btn_OK">OK</string>
+	 <string name="btn_Cancel">Cancel</string>
+	 
+	 <string name="app_exit_title">Exit</string>
+	 <string name="app_exit_warning">Are you sure to exit?</string>
+	 <string name="app_about_title">About</string>
+	 <string name="app_about_info">QCam IPCamera client.\nV1.0.2</string>
+	 
+	 <string name="live_view_exit">Exit</string>
+	 <string name="live_view_audio">Audio</string>
+	 <string name="live_view_talk">Talk</string>
+	 <string name="live_view_snap">Snap</string>
+	 <string name="live_view_device">Device</string>
+	 <string name="live_view_menu_settings">Settings</string>
+	 <string name="live_view_menu_about">About</string>
+	 <string name ="live_view_photo">Photo</string>
+	 <string name ="live_view_no_network_promote">No network connection is availabled</string>
+	 
+	 <string name ="photo_menu_del_cur_pic">Delete current picture</string>
+	 <string name ="photo_menu_del_all_pic">Delete all pictures</string>
+	 
+	 <string name="device_list_back">Return</string>
+	 <string name="device_list_search">Search</string>
+	 <string name="device_list_add">Add</string>
+	 <string name="device_list_title">Device list</string>
+	 <string name="device_list_context_menu_edit">Edit</string>
+	 <string name="device_list_context_menu_del">Delete device</string>
+	 
+	 <string name="device_list_search_title">Searching device</string>
+	 <string name="device_list_search_wait">Please wait a while</string>
+	 <string name="device_list_search_no_dev_found_title">Search result</string>
+	 <string name="device_list_search_no_dev_found">No device found</string>
+	 
+	 <string name="device_list_sel_promote">Please select camera</string>
+	 
+	 <string name="device_list_device_del_title">Delete camera</string>
+	 <string name="device_list_device_del_warning">Are you sure to delete camera:</string>
+	 <string name="device_list_device_del_success">Delete success</string>
+	 
+	 <string name="device_list_device_dev_config_error_title">Error</string>
+	 <string name="device_list_device_dev_config_error_warning">Device config error, IP or UID must be set</string>
+	 <string name="device_list_device_user_name_empty_title">Enter user name and password</string>
+	 
+	 <string name="device_list_menu_clear_device_list">Clear list</string>
+	 
+	 <string name="device_list_add_p2p_device_title">Add P2P device</string>
+	 <string name="device_list_add_p2p_device_error_title">Error</string>
+	 <string name="device_list_add_p2p_device_format_error">UID format error:</string>
+	 <string name="device_list_add_p2p_device_user_empty_warning">User name can not be empty</string>
+	 <string name="device_list_add_p2p_device_already_exist">The device already exist in list</string>
+	 <string name="device_list_add_p2p_device_promote">Place the barcode at the top of camera inside the viewfinder rectangle to scan it </string>
+	 
+	 <string name="ipc_info_config_devType">Camera type</string>
+	 <string name="ipc_info_config_devName">Camera name</string>
+	 <string name="ipc_info_config_ip">IP address</string>
+	 <string name="ipc_info_config_mac">Device ID</string>
+	 <string name="ipc_info_config_streamType">Stream type</string>
+	 <string name="ipc_info_config_webPort">Http port</string>
+	 <string name="ipc_info_config_mediaPort">Media port</string>
+	 <string name="ipc_info_config_userName">User name</string>
+	 <string name="ipc_info_config_password">password</string>
+	 <string name="ipc_info_config_uid">UID</string>
+	 <string name="ipc_info_config_device_type_h264">H264</string>
+	 <string name="ipc_info_config_device_type_mj">MJ</string>
+	 <string name="ipc_info_config_stream_type_main">Main stream</string>
+	 <string name="ipc_info_config_stream_type_sub">Sub stream</string>
+	 <string name="ipc_info_config_save_success">Save success</string>
+	 <string name="ipc_info_config_add_success">Add success</string>
+	 <string name="ipc_info_config_info_not_correct">IP or UID or port infor can not be empty</string>
+	 <string name="ipc_info_config_info_port_format_error">Port format error</string>
+	 <string name="ipc_info_config_info_ip_format_error">IP format error</string>
+	 <string name="ipc_info_config_info_already_exist">The device already exists</string>
+	 
+	 <string name="setting_title">Settings</string>
+	 <string name="setting_user_account_title">Account</string>
+	 <string name="setting_user_account_edit_user_pwd">Change user name or password</string>
+	 <string name="setting_camera_setting_title">Camera</string>
+	 <string name="setting_camera_setting">Change setting</string>
+	 <string name="setting_camera_setting_know_foscam">Know QCam</string>
+	 <string name="setting_camera_setting_visit_foscam">Visit our website</string>
+	 <string name="camera_setting_wireless_setting">Wireless setting</string>
+	 
+	 <string name="change_password_old_name">Old name</string>
+	 <string name="change_password_old_password">Old password</string>
+	 <string name="change_password_new_name">New name</string>
+	 <string name="change_password_new_password">New password</string>
+     <string name="change_password_user_name_empty">User name can not be empty</string>
+	 <string name="change_password_user_pwd_error">User or password error</string>
+	 <string name="change_password_change_success">Change success</string>
+	 
+	 <string name="camera_param_resolution">Resolution</string>
+	 <string name="camera_param_resolution_1080p">1080P</string>
+	 <string name="camera_param_resolution_720p">720P</string>
+	 <string name="camera_param_resolution_vga">VGA</string>
+	 <string name="camera_param_resolution_qvga">QVGA</string>
+	 <string name="camera_param_resolution_qqvga">QQVGA</string>
+	 <string name="camera_param_infra_led_mode">Infra LED mode</string>
+	 <string name="camera_param_infra_led_mode_auto">Auto</string>
+	 <string name="camera_param_infra_led_mode_manual_on">Manual on</string>
+	 <string name="camera_param_infra_led_mode_manual_off">Manual off</string>
+	 
+	 
+	<string name="login_promote_success">Login success</string>
+	<string name="login_promote_fail_usr_pwd_error">User name or password error</string>
+	<string name="login_promote_fail_access_deny">Access deny</string>
+	<string name="login_promote_fail_exceed_max_user">Exceed max user count</string>
+	<string name="login_promote_fail_connect_fail">Can not connect to camera</string>
+	
+	<string name="open_talk_promote_success">Open talk success</string>
+	<string name="open_talk_promote_fail">Already used by another user</string>
+	<string name="close_talk_promote_success">Close talk success</string>
+	<string name="close_talk_promote_fail">Close talk fail</string>
+	
+	<string name="open_audio_promote_success">Start audio</string>
+	<string name="close_audio_promote_success">Stop audio</string>
+    
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp" >
+	
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:gravity="right"
+	        android:text="@string/resolution"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" />
+	
+	    <Spinner
+	        android:id="@+id/resolution"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:entries="@array/resolution"
+	        android:layout_weight="3" />
+	
+	</LinearLayout>	
+	
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp" >
+	
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:gravity="right"
+	        android:text="@string/mode"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" />
+	
+	    <Spinner
+	        android:id="@+id/mode"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:entries="@array/mode"
+	        android:layout_weight="3" />
+	
+	</LinearLayout>	
+	
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp" >
+	
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:gravity="right"
+	        android:text="@string/brightness"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" />
+	
+		 <SeekBar
+		     android:id="@+id/brightness"
+		     android:layout_width="0dip"
+		     android:layout_height="wrap_content"
+		     android:layout_weight="3" />
+	
+	</LinearLayout>		
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginBottom="10dp" >
+	
+	    <TextView
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:gravity="right"
+	        android:text="@string/contrast"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" />
+	
+		 <SeekBar
+		     android:id="@+id/contrast"
+		     android:layout_width="0dip"
+		     android:layout_height="wrap_content"
+		     android:layout_weight="3" />
+	
+	</LinearLayout>	
+	
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp" >
+
+        <CheckBox
+            android:id="@+id/flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/flip" />
+
+    </RelativeLayout>		
+    
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp" >
+
+        <CheckBox
+            android:id="@+id/mirror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/mirror" />
+
+    </RelativeLayout>	    
+	
+</LinearLayout>

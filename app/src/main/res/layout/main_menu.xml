@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" >
+    
+    <ImageView
+    android:id="@+id/blueMarginMainMenu1"
+    android:layout_width="fill_parent"
+    android:layout_height="3dp"
+    android:contentDescription="@string/select_camera"
+    android:src="@drawable/blue_line" />
+
+    <RelativeLayout
+        android:background="@drawable/gray_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <TextView
+            android:id="@+id/selectCameraText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="24sp"
+            android:textColor="#0099CC"
+            android:text="@string/select_camera" />
+
+        <ImageButton
+            android:id="@+id/addCameraButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:onClick="showAddCameraDialog"
+            android:contentDescription="@string/add_camera"
+            android:src="@drawable/add_camera_button" />
+    
+	</RelativeLayout>
+	
+    <ImageView
+        android:id="@+id/blueMarginMainMenu2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+
+     <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="launchIPC"
+        android:text="IPC" />
+
+    <ListView 
+	    android:id="@+id/cameraList"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:hapticFeedbackEnabled="true" /> 
+
+</LinearLayout>

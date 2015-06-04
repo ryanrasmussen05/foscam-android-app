@@ -1,0 +1,1236 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/blueMarginMainMenu1"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gray_box"
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+        
+       <ImageView
+        	android:id="@+id/backButtonSchedule"
+        	android:contentDescription="@string/select_camera"
+        	android:layout_width="35dp"
+        	android:layout_height="35dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:scaleType="fitCenter"
+        	android:src="@drawable/left_arrow" />
+
+        <TextView
+        	android:id="@+id/headerSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backButtonSchedule"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="@string/alarm_schedule"
+            android:textColor="#0099CC"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/blueMarginMainMenu2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:contentDescription="@string/select_camera"
+        android:src="@drawable/blue_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <Spinner 
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp" >
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/selectAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:text="@string/select_all" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/clearAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:text="@string/clear_all" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>            
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:columnCount="5" >
+
+                <Space />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/zero_time" />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fifteen_time" />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/thirty" />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fortyfive" />
+
+                <TextView
+                	android:id="@+id/timeRow0"
+                	android:tag="@string/zero"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_zero" />
+
+                <ImageView
+                    android:id="@+id/time0"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time1"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time2"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time3"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow1"
+                	android:tag="@string/one"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_one" />
+
+                <ImageView
+                    android:id="@+id/time4"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time5"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time6"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time7"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow2"
+                	android:tag="@string/two"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_two" />
+
+                <ImageView
+                    android:id="@+id/time8"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time9"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time10"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time11"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow3"
+                	android:tag="@string/three"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_three" />
+
+                <ImageView
+                    android:id="@+id/time12"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time13"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time14"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time15"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow4"
+                	android:tag="@string/four"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_four" />
+
+                <ImageView
+                    android:id="@+id/time16"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time17"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time18"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time19"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow5"
+                	android:tag="@string/five"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_five" />
+
+                <ImageView
+                    android:id="@+id/time20"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time21"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time22"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time23"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow6"
+                	android:tag="@string/six"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_six" />
+
+                <ImageView
+                    android:id="@+id/time24"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time25"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time26"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time27"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow7"
+                	android:tag="@string/seven"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_seven" />
+
+                <ImageView
+                    android:id="@+id/time28"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time29"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time30"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time31"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow8"
+                	android:tag="@string/eight"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_eight" />
+
+                <ImageView
+                    android:id="@+id/time32"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time33"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time34"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time35"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow9"
+                	android:tag="@string/nine"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_nine" />
+
+                <ImageView
+                    android:id="@+id/time36"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time37"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time38"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time39"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow10"
+                	android:tag="@string/ten"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_ten" />
+
+                <ImageView
+                    android:id="@+id/time40"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time41"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time42"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time43"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow11"
+                	android:tag="@string/eleven"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_eleven" />
+
+                <ImageView
+                    android:id="@+id/time44"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time45"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time46"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+                <ImageView
+                    android:id="@+id/time47"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active"
+                    tools:ignore="TooManyViews" />
+
+                <TextView
+                	android:id="@+id/timeRow12"
+                	android:tag="@string/twelve"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_twelve" />
+
+                <ImageView
+                    android:id="@+id/time48"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time49"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time50"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time51"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow13"
+                	android:tag="@string/thirteen"
+                	android:contentDescription="@string/time_row"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_thirteen"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="TooManyViews" />
+
+                <ImageView
+                    android:id="@+id/time52"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+
+                <ImageView
+                    android:id="@+id/time53"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time54"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time55"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow14"
+                	android:tag="@string/fourteen"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_fourteen" />
+
+                <ImageView
+                    android:id="@+id/time56"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time57"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time58"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time59"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow15"
+                	android:tag="@string/fifteen"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_fifteen" />
+
+                <ImageView
+                    android:id="@+id/time60"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time61"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time62"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time63"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow16"
+                	android:tag="@string/sixteen"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_sixteen" />
+
+                <ImageView
+                    android:id="@+id/time64"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time65"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time66"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time67"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow17"
+                	android:tag="@string/seventeen"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_seventeen" />
+
+                <ImageView
+                    android:id="@+id/time68"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time69"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time70"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time71"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow18"
+                	android:tag="@string/eighteen"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_eighteen" />
+
+                <ImageView
+                    android:id="@+id/time72"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time73"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time74"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time75"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow19"
+                	android:tag="@string/nineteen"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_nineteen" />
+
+                <ImageView
+                    android:id="@+id/time76"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time77"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time78"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time79"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow20"
+                	android:tag="@string/twenty"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_twenty" />
+
+                <ImageView
+                    android:id="@+id/time80"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time81"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time82"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time83"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow21"
+                	android:tag="@string/twentyone"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_twentyone" />
+
+                <ImageView
+                    android:id="@+id/time84"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time85"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time86"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time87"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow22"
+                	android:tag="@string/twentytwo"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_twentytwo" />
+
+                <ImageView
+                    android:id="@+id/time88"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time89"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time90"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time91"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <TextView
+                	android:id="@+id/timeRow23"
+                	android:tag="@string/twentythree"
+                	android:contentDescription="@string/time_row"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/time_twentythree" />
+
+                <ImageView
+                    android:id="@+id/time92"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time93"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time94"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+
+                <ImageView
+                    android:id="@+id/time95"
+                    android:layout_height="50dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/black_box_border"
+                    android:contentDescription="@string/alarm_active" />
+                    
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:text="@string/save" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:text="@string/cancel" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
